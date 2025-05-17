@@ -124,7 +124,8 @@ if user_input:
     reply = generate_reply(user_input)
     st.session_state.messages.append({"role": "bot", "content": reply, "time": now})
     save_history()
-    st.experimental_rerun()
+    st.rerun()
+
 
 # ---------- Download Button ----------
 if st.session_state.messages:
